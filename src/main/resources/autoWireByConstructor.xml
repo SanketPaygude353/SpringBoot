@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--  Constructor injection-->
+
+    <bean id="specifications1" class="com.phoenix.autowire.constructor.Specifications">
+        <property name="brand" value="Toyota" />
+        <property name="model" value="xyz"/>
+    </bean>
+
+<!--    learned how to autowire by name-->
+    <bean id="myCar" class="com.phoenix.autowire.constructor.Car" autowire="constructor"/>
+</beans>
